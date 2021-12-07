@@ -14,9 +14,8 @@
         color: rgb(149, 210, 235);
       }
       .list-group{
-        padding-left: 20px;
         display: grid;
-        grid-template-columns:repeat(8,1fr) ;
+        grid-template-columns:repeat(10,1fr) ;
       }
      .list-group li {
        color: aqua;
@@ -26,6 +25,12 @@
         border: 1px solid rgb(133, 130, 130);
         border-radius: 5px;
         color: rgb(8, 114, 114);
+      }
+      .info{
+        display:flex;
+      }
+      textarea{
+        resize: none;
       }
     </style>
   </head>
@@ -57,7 +62,7 @@
       </nav>
     </div>
     <h1 class="text-center fw-light pt-4 pb-3">23 APRIL,TUESDAY</h1>
-    <div class="list">
+    <div class="lesson">
       <ul class="list-group  list-group-flush">
         <li class="list-group-item text-muted border rounded">1 lesson</li>
         <li class="list-group-item ">2 lesson</li>
@@ -69,7 +74,24 @@
         <li class="list-group-item border-bottom">8 lesson</li>
       </ul>
     </div>
-
+    <div class="info m-5">
+     <div class="col">
+       <p class="text-secondary">Group</p>
+       <h3>ABC-1234</h3>
+     </div>
+     <div class="col">
+      <p class="text-secondary">Subject</p>
+      <h3>HTML & CSS</h3>
+    </div>
+    <div class="col">
+      <p class="text-secondary">Lesson topic</p>
+      <textarea class="form-control-lg"></textarea>
+    </div>
+    <div class="col">
+      <p class="text-secondary">Homework</p>
+      <button type="button" class="btn btn-info text-white ">Add homework</button>
+    </div>
+    </div>
 
 
 
