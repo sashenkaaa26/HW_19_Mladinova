@@ -29,8 +29,53 @@
       .info{
         display:flex;
       }
-      textarea{
+      .resize{
         resize: none;
+      }
+      input {
+        display: none;
+      }
+      .check1 label::before {
+       content: "";
+       padding-right: 10px;
+       padding-left: 10px;
+       border: 1px solid rgb(19, 199, 49);
+       border-radius: 50%;
+       background: #fff;
+       transition: 0.2s;
+       justify-content: center;
+       align-items: center;
+      }
+     .check1 input:checked + label::before {
+      background: rgb(23, 236, 15);
+      }
+      .check2 label::before {
+       content: "";
+       padding-right: 10px;
+       padding-left: 10px;
+       border: 1px solid rgb(231, 196, 37);
+       border-radius: 50%;
+       background: #fff;
+       transition: 0.2s;
+       justify-content: center;
+       align-items: center;
+      }
+      .check2 input:checked + label::before {
+      background: rgb(231, 196, 37);
+      }
+      .check3 label::before {
+       content: "";
+       padding-right: 10px;
+       padding-left: 10px;
+       border: 1px solid rgb(116, 28, 6);
+       border-radius: 50%;
+       background: #fff;
+       transition: 0.2s;
+       justify-content: center;
+       align-items: center;
+      }
+      .check3 input:checked + label::before {
+      background: rgb(116, 28, 6);
       }
     </style>
   </head>
@@ -65,7 +110,7 @@
     <div class="lesson">
       <ul class="list-group  list-group-flush">
         <li class="list-group-item text-muted border rounded">1 lesson</li>
-        <li class="list-group-item ">2 lesson</li>
+        <li class="list-group-item">2 lesson</li>
         <li class="list-group-item">3 lesson</li>
         <li class="list-group-item">4 lesson</li>
         <li class="list-group-item">5 lesson</li>
@@ -85,14 +130,120 @@
     </div>
     <div class="col">
       <p class="text-secondary">Lesson topic</p>
-      <textarea class="form-control-lg"></textarea>
+      <textarea class="resize form-control-lg"></textarea>
     </div>
     <div class="col">
       <p class="text-secondary">Homework</p>
       <button type="button" class="btn btn-info text-white ">Add homework</button>
     </div>
     </div>
-
+    <table class="table">
+      <thead class="bg-info text-white">
+        <tr>
+          <th scope="col" class="p-4">Name</th>
+          <th scope="col" class="p-4">GPA</th>
+          <th scope="col"class="p-4">Is present</th>
+          <th scope="col"class="p-4">Test</th>
+          <th scope="col"class="p-4">Classwork</th>
+          <th scope="col"class="p-4">Comment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="pt-4">1 &nbsp Ashton Hickaman</th>
+          <td class="pt-4">10</td>
+          <td class="pt-4"><div class="check1 form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1"></label>
+          </div>
+          <div class=" check2 form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2"></label>
+          </div>
+          <div class="check3 form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2"></label>
+          </div></td>
+          <td class="pt-4"><select class="form-control form-control-sm">
+            <option></option>
+          </select></td>
+          <td class="pt-4"><select class="form-control form-control-sm">
+            <option></option>
+          </select></td>
+          <td class="pt-4"><textarea></textarea></td>
+        </tr>
+        <tr>
+          <th scope="row" class="pt-4">2 &nbsp Mischa Roberson</th>
+          <td class="pt-4">9</td>
+          <td class="pt-4"><div class="check1 form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1"></label>
+          </div>
+          <div class=" check2 form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2"></label>
+          </div>
+          <div class="check3 form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2"></label>
+          </div></td>
+          <td class="pt-4"><select class="form-control form-control-sm">
+            <option></option>
+          </select></td>
+          <td class="pt-4"><select class="form-control form-control-sm">
+            <option></option>
+          </select></td>
+          <td class="pt-4"><textarea></textarea></td>
+        </tr>
+        <tr>
+          <th scope="row" class="pt-4">3  &nbsp Jaydon Metcalfe</th>
+          <td class="pt-4">11</td>
+          <td class="pt-4"><div class="check1 form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1"></label>
+          </div>
+          <div class=" check2 form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2"></label>
+          </div>
+          <div class="check3 form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2"></label>
+          </div></td>
+          <td class="pt-4"><select class="form-control form-control-sm">
+            <option></option>
+          </select></td>
+          <td class="pt-4"><select class="form-control form-control-sm">
+            <option></option>
+          </select></td>
+          <td class="pt-4"><textarea></textarea></td>
+        </tr>
+        <tr>
+          <th scope="row" class="pt-4">4 &nbsp Gary Jacobson</th>
+          <td class="pt-4">8</td>
+          <td class="pt-4"><div class="check1 form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1"></label>
+          </div>
+          <div class=" check2 form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2"></label>
+          </div>
+          <div class="check3 form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2"></label>
+          </div></td>
+          <td class="pt-4"><select class="form-control form-control-sm">
+            <option></option>
+          </select></td>
+          <td class="pt-4"><select class="form-control form-control-sm">
+            <option></option>
+          </select></td>
+          <td class="pt-4"><textarea></textarea></td>
+        </tr>
+      </tbody>
+    </table>
+    
 
 
 
